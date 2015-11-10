@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Достойный Выбор</title>
+    {% load staticfiles %}
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <div class="title">
+        <img class="symb" src="/media/logo.jpg"/>
+        <h1 class="org-name">
+        <div style="font-size: small; color: #0397d7">Ассоциация</br>участников программ</br>опережающего развития</br>и формирования интеллектуально-кадрового развития</div>"Достойный выбор"</h1>
+        <!--<div class="contacts">
+            phone:00000</br>email:me@vybor.ru
+        </div>-->
+        <div class="social-block">
+            <img class="social-icon" src="{% static 'polls/images/twitter.jpeg' %}" />
+            <img class="social-icon" src="{% static 'polls/images/facebook.jpeg' %}" />
+        </div>
+    </div>
+    <!--<div style="position: relative; margin 0 15%;">
+    <div style="">
+    <img src="media/large/news/images.jpeg" />
+    </div>
+    </div>-->
+    <div class="slideshow">
+            <img src="/media/large/news/images.jpeg" />
+            <img class="slide" src="/media/large/news/images.jpeg" />
+            <img src="/media/large/news/images.jpeg" />
+    </div>
+    <nav>
+        <ul>
+            <li><a class="home" href="{% url 'home:index' %}">Home</a></li>
+            <li><a {% if nav_active_button == "About" %}class="current"{% endif %} href="">About</a>
+                <ul>
+                    <li><a href="{% url 'advisors:index' %}">advisors</a></li>
+                    <li><a href="{% url 'home:index' %}">strategy</a></li>
+                </ul>
+            </li>
+            <li><a {% if nav_active_button == "Projects" %}class="current"{% endif %} href="{% url 'projects:index' %}">Projects</a></li>
+            <li><a {% if nav_active_button == "Media" %}class="current"{% endif %} href="">Media</a>
+                <ul>
+                    <li><a href="{% url 'home:index' %}">video</a></li>
+                    <li><a href="{% url 'home:index' %}">photo</a></li>
+                </ul>
+            </li>
+            <li><a {% if nav_active_button == "Documents" %}class="current"{% endif %} href="{% url 'documents:index' %}">Documents</a></li>
+            <li><a {% if nav_active_button == "Contacts" %}class="current"{% endif %} href="{% url 'contacts:index' %}">Contacts</a></li>
+        </ul>
+    </nav>
+    {% block content %}{% endblock %}
+    <div class="signer">
+        ©2015 Достойный Выбор.
+    </div>
+</body>
+</html>

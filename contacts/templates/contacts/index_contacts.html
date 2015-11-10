@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'contacts/style.css' %}" />
+{% endblock %}
+{% block content %}
+    <ul class="contact-list">
+        <div class="contact-title">Offices</div>
+        {% for office in office %}
+            <li>
+                <div class="contact-name">
+                    <b>{{ office.address }}</b></br>
+                    {{ office.description }}
+                </div>
+                <div class="contact-item">
+                    <i>phone:</i>
+                    <ul class="contact-sub-list">
+                        {% for phone in person.phone_set.all %}
+                            <li>{{ phone }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+        {% endfor %}
+        </br>
+        <div class="contact-title">Contacts</div>
+        {% for person in contacts %}
+            <li>
+                <div class="contact-name">
+                    <b>{{ person.position }}</b></br>
+                    {{ person.last_name }} {{ person.first_name }} {{person.father_name }}</br>
+                </div>
+                <div class="contact-item">
+                    <i>email:</i>
+                    <ul class="contact-sub-list">
+                        {% for email in person.email_set.all %}
+                            <li>{{ email }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="contact-item">
+                    <i>phone:</i>
+                    <ul class="contact-sub-list">
+                        {% for phone in person.phone_set.all %}
+                            <li>{{ phone }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

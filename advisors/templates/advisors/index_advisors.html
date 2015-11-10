@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'advisors/style.css' %}" />
+{% endblock %}
+{% block content %}
+    <ul class="advisor-list">
+        <div class="advisor-title">Advisors</div>
+        {% for advisor in advisors %}
+            <li>
+                <div class="advisor-item">
+                    <img class="advisor-photo" src="{{ advisor.person.main_photo.image.url }}" />
+                    <div class="advisor-name">
+                        {{ advisor.person.last_name }} {{ advisor.person.first_name }} {{ advisor.person.father_name }}
+                    </div>
+                    {{ advisor.person.description|safe }}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

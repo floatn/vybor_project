@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ org_name }}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'news/style.css' %}" />
+</head>
+<body>
+    <div class="title">
+        <img class="symb" src="{% static 'polls/images/dost_vybor2.jpeg' %}" />
+        <h1 class="org-name">Достойный выбор</h1>
+        <div class="contacts">
+            phone:00000</br>email:me@vybor.ru
+        </div>
+        <div class="social-block">
+            <img class="social-icon" src="{% static 'polls/images/twitter.jpeg' %}" />
+            <img class="social-icon" src="{% static 'polls/images/facebook.jpeg' %}" />
+        </div>
+    </div>
+    <nav>
+        <ul class="navigation">
+            <li class="nav"><a class="navlink" href="{% url 'home:index' %}">Home</a></li>
+            <li class="nav"><a class="navlink navlink-current" href="{% url 'news:index' %}">News</a></li>
+            <li class="nav"><a class="navlink" href="{% url 'projects:index' %}">Projects</a></li>
+            <li class="nav"><a  class="navlink"href="{% url 'documents:index' %}">Documents</a></li>
+            <li class="nav"><a  class="navlink"href="{% url 'contacts:index' %}">Contacts</a></li>
+        </ul>
+    </nav>
+    <!--<div class="content">News</div>-->
+    <div class="news-block">
+        <ul class="news-list">
+            {% for item in latest_news_list %}
+                <li id= "{{ item.id }}" class="news-item">
+                    <div class="news-pre">
+                        <div class="news-date">
+                            {{ item.date }}
+                        </div>
+                        <div class="news-title">
+                            {{ item.title }}
+                        </div>
+                        <img class="news-img" src="{{ item.title_image.url }}"/>
+                        <div class="news-text">
+                            {{ item.description|safe }}
+                        </div></br>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="signer">
+        ©2015 Достойный Выбор.
+    </div>
+</body>
+</html>

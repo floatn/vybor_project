@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'projects/style.css' %}" />
+{% endblock %}
+{% block content %}
+<ul class="projects-list">
+    {% for project in projects %}
+        <li class="projects-item">
+            <div class="project-title">{{ project.title }}</div>
+            <div class="project-date">started at: {{ project.date_started }}</div>
+            <div class="project-date">finished at: {{ project.date_finished|default_if_none:"not finished yet" }}</div>
+            <div class="project-description">{{ project.description|safe }}</div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
