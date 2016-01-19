@@ -9,14 +9,13 @@
         {% for office in office %}
             <li>
                 <div class="contact-name">
-                    <b>{{ office.address }}</b></br>
-                    {{ office.description }}
+                    {{ office.description }}</br>
+                    <div style="margin: 0px 10px"><b>{{ office.address }}</b></br></div>
                 </div>
                 <div class="contact-item">
-                    <i>phone:</i>
                     <ul class="contact-sub-list">
-                        {% for phone in person.phone_set.all %}
-                            <li>{{ phone }}</li>
+                        {% for phone in office.phone_set.all %}
+                            <i><li>phone{{ forloop.counter }}: {{ phone }}</li></i>
                         {% endfor %}
                     </ul>
                 </div>
@@ -28,21 +27,19 @@
             <li>
                 <div class="contact-name">
                     <b>{{ person.position }}</b></br>
-                    {{ person.last_name }} {{ person.first_name }} {{person.father_name }}</br>
+                    <div style="margin: 0px 10px">{{ person.last_name }} {{ person.first_name }} {{person.father_name }}</br></div>
                 </div>
                 <div class="contact-item">
-                    <i>email:</i>
                     <ul class="contact-sub-list">
                         {% for email in person.email_set.all %}
-                            <li>{{ email }}</li>
+                            <i><li>email{{ forloop.counter }}: {{ email }}</li></i>
                         {% endfor %}
                     </ul>
                 </div>
                 <div class="contact-item">
-                    <i>phone:</i>
                     <ul class="contact-sub-list">
                         {% for phone in person.phone_set.all %}
-                            <li>{{ phone }}</li>
+                            <i><li>phone{{ forloop.counter }}: {{ phone }}</li></i>
                         {% endfor %}
                     </ul>
                 </div>

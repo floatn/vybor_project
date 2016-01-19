@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'news/style.css' %}" />
+{% endblock %}
+{% block content %}
+    <div class="news-block">
+        <ul class="news-list">
+            {% for item in latest_news_list %}
+                <li id= "{{ item.id }}" class="news-item">
+                    <div class="news-pre">
+                        <div class="news-date">
+                            {{ item.date }}
+                        </div>
+                        <div class="news-title">
+                            {{ item.title }}
+                        </div>
+                        <img class="news-img" src="{{ item.title_image.url }}"/>
+                        <div class="news-text">
+                            {{ item.description|safe }}
+                        </div></br>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

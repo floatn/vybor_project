@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'strategy/style.css' %}" />
+{% endblock %}
+{% block content %}
+<h2>Strategy</h2>
+<ul class="strategy">
+    {% for paragraph in paragraphs %}
+        <li class="paragraph">
+            <p>{{ paragraph.text|safe }}</p>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

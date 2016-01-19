@@ -10,6 +10,10 @@ urlpatterns = [
     url(r'^projects/', include('projects.urls', namespace='projects')),
     url(r'^documents/', include('documents.urls', namespace='documents')),
     url(r'^advisors/', include('advisors.urls', namespace='advisors')),
+    url(r'^strategy/', include('strategy.urls', namespace='strategy')),
+    url(r'^partners/', include('partners.urls', namespace='partners')),
+    url(r'^video/', include('video.urls', namespace='video')),
+    url(r'^images/', include('images.urls', namespace='images')),
 ]
 if settings.DEBUG:
     urlpatterns += patterns('',

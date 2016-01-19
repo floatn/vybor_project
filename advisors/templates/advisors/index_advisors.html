@@ -4,8 +4,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'advisors/style.css' %}" />
 {% endblock %}
 {% block content %}
+    <h2>Advisors</h2>
     <ul class="advisor-list">
-        <div class="advisor-title">Advisors</div>
         {% for advisor in advisors %}
             <li>
                 <div class="advisor-item">

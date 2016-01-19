@@ -1,0 +1,53 @@
+div.title {
+    overflow: hidden;
+    position: relative;
+    margin: 0 10%;
+}
+h1.org-name {
+    text-align: center;
+    float: left;
+    color: #e31e2f;
+    width: 500px;
+    margin-top: 0px;
+}
+img.symb {
+    float: right;
+    width: 181px;
+    height: 182px;
+}
+div.contacts {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    font-size: x-small;
+    font-style: italic;
+}
+ul.partners-list {
+    list-style:none;
+    margin: 0 15%;
+}
+a.partner-title {
+    font-weight: bold;
+    font-size: large;
+    padding: 0 100px;
+    color: #000000;
+    text-decoration: none;
+}
+div.partner-description {
+    overflow: hidden;
+}
+div.partner-image {
+    float: left;
+    position: relative;
+    margin: 10px;
+}
+div.social-block {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+div.title {
+    overflow: hidden;
+    position: relative;
+}

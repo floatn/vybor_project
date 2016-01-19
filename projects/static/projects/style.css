@@ -16,90 +16,6 @@ img.symb {
     width: 181px;
     height: 182px;
 }
-div.slideshow {
-    position: relative;
-    overflow: hidden;
-    margin: 0 15%;
-}
-div.slideshow > img {
-    float: left;
-}
-div.slideshow > img.slide {
-    overflow: hidden;
-    position: relative;
-    animation: slideshow 5s linear infinite;
-    animation-delay: 2s;
-    transform: translate3d(0, 0, 0);
-    margin: 0;
-}
-@keyframes slideshow {
-    0% { transform: translateX(0%) }
-    25% { transform: translateX(-100%) }
-    75% { transform: translateX(-100%) }
-    100% { transform: translateX(0%) }
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: #0397d7;
-    position: relative;
-    display: inline-table;
-}
-nav > ul {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-/*nav ul:after {
-    content: "";
-    clear: both;
-    display: block;
-}*/
-nav ul ul {
-    display: none;
-    position: absolute;
-    top:100%;
-}
-nav ul li {
-    float: left;
-}
-nav ul li:hover > ul {
-    display: block;
-}
-nav ul ul li {
-    float: none;
-    position: relative;
-}
-nav a:link, a:visited {
-    text-align: center;
-    padding: 8px 15px;
-    display: block;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: #0397d7;
-    /*border-right: 1px solid #ccc;*/
-}
-nav a:hover, a:active {
-    text-align: center;
-    color: #0397d7;
-    background-color: #fff;
-}
-nav a.home {
-    color: #fff;
-    background-color: #e31e2f;
-}
-nav a.home:hover, a.home:active {
-    text-align: center;
-    background-color: #fff;
-    color: #e31e2f;
-}
-nav a.current {
-    background-color: #fff;
-    color: #0397d7;
-}
 div.contacts {
     position: absolute;
     top: 1px;
@@ -123,9 +39,6 @@ div.project-date {
     font-style: italic;
 }
 div.project-description {
-}
-img.social-icon {
-    margin: 5px;
 }
 div.social-block {
     display: block;

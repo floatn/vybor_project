@@ -1,6 +1,9 @@
 from django.db import models
 
-from news.models import News, Image, Video
+from news.models import News
+from images.models import Image
+from video.models import Video
+
 
 class Project(models.Model):
     title = models.CharField(max_length=255) 

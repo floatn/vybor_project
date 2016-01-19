@@ -3,30 +3,78 @@
 <head>
     <title>Достойный Выбор</title>
     {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static '/static/style.css' %}" />
     {% block css %}{% endblock %}
+    <!-- add jQuery library -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- add fancyBox -->
+    <link rel="stylesheet" href="/static/javascript/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/static/javascript/jquery.fancybox.pack.js"></script>
+    <!-- optional helpers -->
+    <link rel="stylesheet" href="/static/javascript/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/static/javascript/helpers/jquery.fancybox-buttons.js"></script>
+    <script type="text/javascript" src="/static/javascript/helpers/jquery.fancybox-media.js"></script>
+    <link rel="stylesheet" href="/static/javascript/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="/static/javascript/helpers/jquery.fancybox-thumbs.js"></script>
+    <!-- -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none'
+            });
+            $(".utube").fancybox({
+                maxWidth: 800,
+                maxHeight: 600,
+                fitToView: false,
+                width: '70%',
+                height: '70%',
+                autoSize: false,
+                closeClick: false,
+                openEffect: 'none',
+                closeEffect: 'none'
+            });
+            var counter = 0,
+                $items = $('.slideshow figure'),
+                numItems = $items.length;
+            var showCurrent = function() {
+                var itemToShow = Math.abs(counter%numItems);
+                $items.removeClass('show');
+                $items.eq(itemToShow).addClass('show');
+            };
+            $('.next').on('click', function() {
+                counter++;
+                showCurrent();
+            });
+            $('.prev').on('click', function() {
+                counter--;
+                showCurrent();
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="title">
         <img class="symb" src="/media/logo.jpg"/>
         <h1 class="org-name">
-        <div style="font-size: small; color: #0397d7">Ассоциация</br>участников программ</br>опережающего развития</br>и формирования интеллектуально-кадрового развития</div>"Достойный выбор"</h1>
+        <div style="font-size: small; color: #0397d7; margin-top: 10px;">Ассоциация</br>участников программ</br>опережающего развития</br>и формирования интеллектуально-кадрового развития</div>"Достойный выбор"</h1>
         <!--<div class="contacts">
             phone:00000</br>email:me@vybor.ru
         </div>-->
         <div class="social-block">
-            <img class="social-icon" src="{% static 'polls/images/twitter.jpeg' %}" />
-            <img class="social-icon" src="{% static 'polls/images/facebook.jpeg' %}" />
+            <!--<img class="social-icon" src="{% static 'polls/images/twitter.jpeg' %}" />
+            <img class="social-icon" src="{% static 'polls/images/facebook.jpeg' %}" />-->
         </div>
     </div>
-    <!--<div style="position: relative; margin 0 15%;">
-    <div style="">
-    <img src="media/large/news/images.jpeg" />
-    </div>
-    </div>-->
     <div class="slideshow">
-            <img src="/media/large/news/images.jpeg" />
-            <img class="slide" src="/media/large/news/images.jpeg" />
-            <img src="/media/large/news/images.jpeg" />
+       {% for slide in slide_list %}
+           <figure class={% if forloop.first %}"show"{% else %}""{% endif %}>
+               <img style="width: 100%;" src="{{ slide.image.url }}" />
+               <figcaption>{{ slide.caption|safe }}</figcaption>
+           </figure>
+       {% endfor %}
+       <span class="prev">&laquo;</span>
+       <span class="next">&raquo;</span>
     </div>
     <nav>
         <ul>
@@ -34,23 +82,37 @@
             <li><a {% if nav_active_button == "About" %}class="current"{% endif %} href="">About</a>
                 <ul>
                     <li><a href="{% url 'advisors:index' %}">advisors</a></li>
-                    <li><a href="{% url 'home:index' %}">strategy</a></li>
+                    <li><a href="{% url 'strategy:index' %}">strategy</a></li>
+                    <li><a href="{% url 'partners:index' %}">partners</a></li>
                 </ul>
             </li>
             <li><a {% if nav_active_button == "Projects" %}class="current"{% endif %} href="{% url 'projects:index' %}">Projects</a></li>
             <li><a {% if nav_active_button == "Media" %}class="current"{% endif %} href="">Media</a>
                 <ul>
-                    <li><a href="{% url 'home:index' %}">video</a></li>
-                    <li><a href="{% url 'home:index' %}">photo</a></li>
+                    <li><a href="{% url 'video:index' %}">video</a></li>
+                    <li><a href="{% url 'images:index' %}">photo</a></li>
                 </ul>
             </li>
             <li><a {% if nav_active_button == "Documents" %}class="current"{% endif %} href="{% url 'documents:index' %}">Documents</a></li>
-            <li><a {% if nav_active_button == "Contacts" %}class="current"{% endif %} href="{% url 'contacts:index' %}">Contacts</a></li>
+            <li style="border-right: 1px solid #fff;"><a {% if nav_active_button == "Contacts" %}class="current"{% endif %} href="{% url 'contacts:index' %}">Contacts</a></li>
+            <li class="social-item">
+                    <a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/facebook4.svg' %}"></a>
+            </li>
+            <li class="social-item">
+                    <a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/insta.svg' %}"></a>
+            </li>
+            <li class="social-item">
+                    <a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/youtube3.svg' %}"></a>
+            </li>
+            <li class="social-item">
+                    <a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/vk2.svg' %}"></a>
+            </li>
         </ul>
     </nav>
-    {% block content %}{% endblock %}
-    <div class="signer">
-        ©2015 Достойный Выбор.
+    <div style="margin: 0 10%;">
+        {% block content %}{% endblock %}
+    </div>
+    <div style="padding-left:8px; display:block; color:#f2f2f2; background-color:#0397d7; font-size:x-small;">
+        ©2016 Достойный Выбор.
     </div>
 </body>
-</html>

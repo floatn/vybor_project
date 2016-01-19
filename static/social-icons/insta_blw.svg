@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="100"
+   height="100"
+   viewBox="0 0 80 80"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg2"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="insta_blw.svg">
+  <title
+     id="title2997">Instagram icon</title>
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1024"
+     inkscape:window-height="551"
+     id="namedview16"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     inkscape:zoom="3.1362499"
+     inkscape:cx="93.610421"
+     inkscape:cy="61.464855"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     showguides="false">
+    <sodipodi:guide
+       position="47.35062,68.622375"
+       orientation="0,0"
+       id="guide3834" />
+    <sodipodi:guide
+       position="52.521316,62.802236"
+       orientation="0,0"
+       id="guide3836" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4">
+Created by potrace 1.12, written by Peter Selinger 2001-2015
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title>Instagram icon</dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <rect
+     style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#b40000;stroke-width:0.01878858000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect3991"
+     width="18.740118"
+     height="2.7970738"
+     x="1.2809551"
+     y="26.383717" />
+  <rect
+     style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#b40000;stroke-width:0.02348572000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect3993"
+     width="24.180855"
+     height="3.325572"
+     x="74.62809"
+     y="33.150364"
+     transform="scale(0.8,0.8)" />
+  <rect
+     style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#b40000;stroke-width:0.02348572000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect3987"
+     width="19.051582"
+     height="17.698807"
+     x="72.035271"
+     y="9.3640699"
+     transform="scale(0.8,0.8)" />
+  <path
+     style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.02300000000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     d="m 26.78125,1.375 -3.0625,0.03125 -1.75,0 C 16.984716,1.3077111 11.800799,3.0792399 8.28125,6.25 l 0,22.3125 18.96875,0 0,-27.1875 z"
+     transform="scale(0.8,0.8)"
+     id="rect3909"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccccc" />
+  <rect
+     style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#b40000;stroke-width:0.02348572000000000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     id="rect3989"
+     width="51.016342"
+     height="51.9729"
+     x="24.232763"
+     y="25.229174"
+     transform="scale(0.8,0.8)" />
+  <g
+     transform="matrix(0.01880253,0,0,-0.01877464,-8.09169,88.053468)"
+     id="g6"
+     style="fill:#002310;stroke:none;fill-opacity:1">
+    <path
+       d="m 1288,4123 -3,-508 -48,-3 c -27,-2 -55,2 -63,9 -12,10 -14,90 -14,500 0,555 10,502 -90,471 l -55,-18 -5,-479 -5,-480 -53,-3 c -31,-2 -60,2 -68,9 -12,10 -14,82 -14,435 0,390 -1,424 -17,424 -9,0 -60,-44 -114,-98 -86,-87 -103,-111 -147,-203 -84,-172 -85,-176 -89,-571 l -5,-348 671,0 c 369,0 671,4 671,8 0,13 119,107 191,150 87,53 188,95 295,123 131,34 340,33 475,-3 160,-43 317,-124 436,-225 l 62,-53 666,0 667,0 -4,353 c -4,329 -6,357 -27,427 -42,142 -93,224 -215,346 -122,121 -203,172 -346,216 l -75,23 -1197,3 -1198,3 -2,-508 -3,-508 -48,-3 c -27,-2 -55,2 -63,9 -12,10 -14,91 -14,510 l 0,499 -75,0 -75,0 -2,-507 z m 2872,122 c 17,-9 39,-33 50,-55 18,-36 20,-59 20,-277 0,-344 11,-333 -329,-333 -258,0 -289,7 -322,72 -19,37 -20,55 -17,289 l 3,251 37,34 38,34 245,0 c 201,0 251,-3 275,-15 z"
+       id="path10"
+       inkscape:connector-curvature="0"
+       style="fill:#002310;fill-opacity:1;stroke:#b40000;stroke-opacity:1;color:#000000;fill-rule:nonzero;stroke-width:0.9999998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="m 502,2153 3,-1008 23,-75 C 572,927 623,846 744,724 868,601 951,550 1096,508 l 79,-23 1385,0 1385,0 79,23 c 159,46 270,115 389,242 83,88 151,206 189,330 l 23,75 3,1003 3,1002 -616,0 c -536,0 -615,-2 -615,-15 0,-8 16,-40 36,-70 189,-297 208,-678 50,-994 -162,-322 -460,-529 -823,-571 -292,-34 -630,92 -840,314 -84,88 -131,158 -193,289 -73,151 -94,249 -94,427 0,117 4,162 22,234 26,105 74,219 125,299 20,32 37,64 37,72 0,13 -78,15 -610,15 l -611,0 3,-1007 z"
+       id="path14"
+       inkscape:connector-curvature="0"
+       style="fill:#002310;fill-opacity:1" />
+  </g>
+</svg>

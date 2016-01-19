@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'partners/style.css' %}" />
+{% endblock %}
+{% block content %}
+<ul class="partners-list">
+    <h2>Partners</h2>
+    {% for partner in partners %}
+        <li class="partner-item">
+        <div>
+        <a class="partner-title" href="{{ partner.link }}">{{ partner.title }}</a>
+        <div class="partner-description">
+            <div class="partner-image">
+                <img src="{{ partner.image.image.url }}"/>
+            </div>
+            <div class="partner-description">{{ partner.description|safe }}</div>
+        </div>
+        </li>
+        </div>
+    {% endfor %}
+</ul>
+{% endblock %}

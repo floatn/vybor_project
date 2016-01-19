@@ -50,6 +50,10 @@ if socket.gethostname() in ['host13',]:
         'documents',
         'news',
         'advisors',
+        'strategy',
+        'partners',
+        'video',
+        'images',
     )
 
     MIDDLEWARE_CLASSES = (
@@ -97,7 +101,11 @@ if socket.gethostname() in ['host13',]:
     STATIC_URL = '/static/'
     MEDIA_URL = '/media/'
 
-    #STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
+
+    #STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static/')
+    STATICFILES_DIRS = [
+        os.path.join(PROJECT_ROOT, "static"),
+    ]
     MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media/')
 else:
     DEBUG = False

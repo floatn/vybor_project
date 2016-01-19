@@ -4,4 +4,16 @@
     <link rel="stylesheet" type="text/css" href="{% static 'documents/style.css' %}" />
 {% endblock %}
 {%block content %}
+    <!--<div class="documents-header">Documents</div>-->
+    <ul class="document-list">
+        {% for document in document_list %}
+            <li class="document-item">
+                <div class="document-description">{{ document.description }}</div>
+                <div>
+                    <img class="document-icon" src="{{ document.icon.url }}"/>
+                    <a class="document-file" href="{{ document.file.url }}">{{ document.file.name }}</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
