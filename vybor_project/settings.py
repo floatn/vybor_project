@@ -11,7 +11,7 @@ import os
 import socket
 
 
-if socket.gethostname() in ['host13',]:
+if True:
     # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
     BASE_DIR = os.path.dirname(os.path.dirname(__file__))
     #ROOT_PATH = os.path.dirname(__file__)
@@ -25,14 +25,14 @@ if socket.gethostname() in ['host13',]:
     # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
     # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = '4dc83(bdfm^!jq&36m0p7tw@o33rizq3xz7&f((6hsm#89^&-*'
+    SECRET_KEY = '2@jtmvj088#$(j29x5z7n(#e7b**d-gjp6c4rz$+5w3y1br@cs'
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
 
     TEMPLATE_DEBUG = True
 
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['tibi-et-igni.myjino.ru',]
 
 
     # Application definition
@@ -86,7 +86,7 @@ if socket.gethostname() in ['host13',]:
 
     LANGUAGE_CODE = 'en-us'
 
-    TIME_ZONE = 'UTC'
+    TIME_ZONE = 'Europe/Moscow'
 
     USE_I18N = True
 
@@ -102,10 +102,10 @@ if socket.gethostname() in ['host13',]:
     MEDIA_URL = '/media/'
 
 
-    #STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static/')
-    STATICFILES_DIRS = [
-        os.path.join(PROJECT_ROOT, "static"),
-    ]
+    STATIC_ROOT = os.path.join(os.path.expanduser('~'), 'domains/tibi-et-igni.myjino.ru/static')
+    #STATICFILES_DIRS = [
+    #    os.path.join(PROJECT_ROOT, "static"),
+    #]
     MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media/')
 else:
     DEBUG = False
