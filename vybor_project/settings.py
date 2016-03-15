@@ -16,9 +16,26 @@ if True:
     BASE_DIR = os.path.dirname(os.path.dirname(__file__))
     #ROOT_PATH = os.path.dirname(__file__)
     PROJECT_ROOT = os.path.split(os.path.split(os.path.abspath(__file__))[0])[0]
-    TEMPLATE_DIRS = (
-        os.path.join(PROJECT_ROOT, 'templates'),
-    )
+    TEMPLATES = [
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [
+                os.path.join(PROJECT_ROOT, 'templates'),
+            ],
+            'APP_DIRS': True,
+            'OPTIONS': {
+                'context_processors': [
+                    'django.contrib.auth.context_processors.auth',
+                    'django.template.context_processors.debug',
+                    'django.template.context_processors.i18n',
+                    'django.template.context_processors.media',
+                    'django.template.context_processors.static',
+                    'django.template.context_processors.tz',
+                    'django.contrib.messages.context_processors.messages',
+                ],
+            },
+        },
+    ]
 
 
     # Quick-start development settings - unsuitable for production
@@ -28,9 +45,7 @@ if True:
     SECRET_KEY = '2@jtmvj088#$(j29x5z7n(#e7b**d-gjp6c4rz$+5w3y1br@cs'
 
     # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = True
-
-    TEMPLATE_DEBUG = True
+    DEBUG = False
 
     ALLOWED_HOSTS = ['tibi-et-igni.myjino.ru',]
 
@@ -108,5 +123,4 @@ if True:
     #]
     MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media/')
 else:
-    DEBUG = False
-    TEMPLATE_DEBUG =False
+    DEBUG = True
