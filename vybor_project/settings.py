@@ -118,9 +118,10 @@ if True:
 
 
     STATIC_ROOT = os.path.join(os.path.expanduser('~'), 'domains/tibi-et-igni.myjino.ru/static')
-    #STATICFILES_DIRS = [
-    #    os.path.join(PROJECT_ROOT, "static"),
-    #]
-    MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media/')
+    MEDIA_ROOT = os.path.join(os.path.expanduser('~'), 'domains/tibi-et-igni.myjino.ru/media')
 else:
     DEBUG = True
+    STATICFILES_DIRS = [
+        os.path.join(PROJECT_ROOT, "static"),
+    ]
+    MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media/')

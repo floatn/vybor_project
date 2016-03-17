@@ -17,6 +17,6 @@ urlpatterns = [
     url(r'^images/', include('images.urls', namespace='images')),
 ]
 #if settings.DEBUG:
-urlpatterns += static(r'^media/(?P<path>.*)$',
-    document_root=settings.MEDIA_ROOT,
-)
+#urlpatterns += static(r'^media/(?P<path>.*)$',
+#    document_root=settings.MEDIA_ROOT,
+#)
