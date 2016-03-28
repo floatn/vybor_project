@@ -1,3 +1,8 @@
+div.title {
+    overflow: hidden;
+    position: relative;
+    margin: 0 10%;
+}
 img.symb {
     float: right;
     width: 181px;
