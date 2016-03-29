@@ -8,6 +8,15 @@ img.symb {
     width: 181px;
     height: 182px;
 }
+h1.org-name {
+    /*border: 1px solid #ccc;*/
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    color: #e31e2f;
+    width: 500px;
+    margin-top: 0px;
+}
 .slideshow {
     position: relative;
     display: block;

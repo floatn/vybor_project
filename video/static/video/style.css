@@ -3,14 +3,6 @@ div.title {
     position: relative;
     margin: 0 10%;
 }
-h1.org-name {
-    /*border: 1px solid #ccc;*/
-    text-align: center;
-    float: left;
-    color: #e31e2f;
-    width: 500px;
-    margin-top: 0px;
-}
 img.symb {
     float: right;
     width: 181px;
