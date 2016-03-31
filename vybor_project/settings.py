@@ -34,10 +34,6 @@ TEMPLATES = [
     },
 ]
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '2@jtmvj088#$(j29x5z7n(#e7b**d-gjp6c4rz$+5w3y1br@cs'
 
