@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.staticfiles import views
 from django.conf import settings
 
 urlpatterns = [
@@ -16,7 +17,6 @@ urlpatterns = [
     url(r'^video/', include('video.urls', namespace='video')),
     url(r'^images/', include('images.urls', namespace='images')),
 ]
-#if settings.DEBUG:
-#urlpatterns += static(r'^media/(?P<path>.*)$',
-#    document_root=settings.MEDIA_ROOT,
-#)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
