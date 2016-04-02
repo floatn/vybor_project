@@ -1,10 +1,9 @@
 div.title {
     overflow: hidden;
     position: relative;
-    margin: 0 15%;
+    text-align: center;
 }
 img.symb {
-    /*float: right;*/
     vertical-align: middle;
     width: 181px;
     height: 182px;
