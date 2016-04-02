@@ -154,9 +154,10 @@ h2 {
     margin: 20px 0px 0px 10px;
 }
 div.signer {
-    padding-left: 8px;
-    display: block;
+    padding: 5px 10px;
     color: #f2f2f2;
-    background-color: #069;
+    /*background-color: #069;*/
+    background-color: #0397d7;
     font-size: x-small;
+    margin: 0 10%;
 }
