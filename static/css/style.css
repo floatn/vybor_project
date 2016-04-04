@@ -1,7 +1,6 @@
 div.title {
-    overflow: hidden;
-    position: relative;
-    text-align: center;
+    width: 50%;
+    margin: auto;
 }
 img.symb {
     vertical-align: middle;
@@ -9,7 +8,6 @@ img.symb {
     height: 182px;
 }
 span.org-name {
-    vertical-align: middle;
     color: #e31e2f;
     font-size: 2em;
     font-weight: bold;
