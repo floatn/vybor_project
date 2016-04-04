@@ -61,9 +61,7 @@ div.news-text {
     overflow: hidden;
 }
 div.news-block {
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    padding: 0px;
+    /*border: 1px solid #ccc;*/
 }
 ul.news-list {
     text-align: center;

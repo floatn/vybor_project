@@ -7,7 +7,9 @@ img.symb {
     width: 181px;
     height: 182px;
 }
-span.org-name {
+div.org-name {
+    display: inline-block;
+    vertical-align: middle;
     color: #e31e2f;
     font-size: 2em;
     font-weight: bold;
@@ -17,7 +19,7 @@ span.org-name {
     display: block;
     overflow: hidden;
     width: 80%;
-    margin: 0 10%;
+    margin: 3px 10%;
 }
 figure {
     position: absolute;
@@ -58,31 +60,46 @@ figure.show {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
 }
+nav {
+    margin: 0 10%;
+    background-color: #0397d7;
+}
 nav ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: #0397d7;
     position: relative;
-    display: inline-table;
+    display: inline-block;
 }
-nav > ul {
+/*nav > ul {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-}
+}*/
 nav ul ul {
     display: block;
     visibility: hidden;
-    opacity: 0;
     position: absolute;
+    z-index: 1;
     top: 100%;
+    opacity: 0;
 }
 nav ul li {
-    float: left;
+    /*float: left;*/
+    display: inline-block;
+}
+nav ul li ul li {
+    /*float: left;*/
+    display: block;
+}
+li.link {
+    display: block;
 }
 nav ul li:hover > ul {
     visibility: visible;
+    position: absolute;
+    z-index: 1;
     opacity: 1;
     transition: opacity 0.5s;
 }
@@ -132,7 +149,10 @@ nav a {
     outline: 0px;
 }
 li.social-item {
+    display: inline-block;
     float: right;
+    height: 30px;
+    width: 30px;
 }
 a.social-link:link, a.social-link:hover, a.social-link:visited {
     height: 30px;
@@ -142,20 +162,25 @@ a.social-link:link, a.social-link:hover, a.social-link:visited {
     background-color: #0397d7;
 }
 img.social-icon {
+    vertical-align: middle;
     height: 30px;
     margin: 0;
     padding: 0;
     border: 0;
 }
-h2 {
+/*h2 {
     color: #0397d7;
     margin: 20px 0px 0px 10px;
+}*/
+div.content2 {
+    margin: 0 10%;
+    color: white;
+    background-color: lightblue;
 }
 div.signer {
     padding: 5px 10px;
     color: #f2f2f2;
-    /*background-color: #069;*/
     background-color: #0397d7;
     font-size: x-small;
-    margin: 0 10%;
+    margin: 10px 10% 0;
 }

@@ -57,38 +57,28 @@
     <div class="title">
         <!--div style="font-size: small; color: #0397d7; margin-top: 10px;">Ассоциация</br>участников программ</br>опережающего развития</br>и формирования интеллектуально-кадрового развития</div-->
         <img class="symb" src="/media/logo.jpg">
-        <div style="display:inline-block;vertical-align:middle;"><span class="org-name">ДОСТОЙНЫЙ <br>ВЫБОР</span></div>
+        <div class="org-name">ДОСТОЙНЫЙ <br>ВЫБОР</div>
     </div>
-    <div class="slideshow">
-       {% for slide in slide_list %}
-           <figure class={% if forloop.first %}"show"{% else %}""{% endif %}>
-               <img style="width: 100%;" src="{{ slide.image.url }}" />
-               <figcaption>{{ slide.caption|safe }}</figcaption>
-           </figure>
-       {% endfor %}
-       <span class="prev">&laquo;</span>
-       <span class="next">&raquo;</span>
-    </div>
-    <nav>
+    <nav><!--Removed </li> to delete gaps between nav items-->
         <ul>
-            <li><a class="home" href="{% url 'home:index' %}">Home</a></li>
+            <li><a class="home" href="{% url 'home:index' %}">News</a>
             <li><a {% if nav_active_button == "About" %}class="current"{% endif %} href="">About</a>
                 <ul>
                     <li><a href="{% url 'advisors:index' %}">advisors</a></li>
                     <li><a href="{% url 'strategy:index' %}">strategy</a></li>
                     <li><a href="{% url 'partners:index' %}">partners</a></li>
                 </ul>
-            </li>
-            <li><a {% if nav_active_button == "Projects" %}class="current"{% endif %} href="{% url 'projects:index' %}">Projects</a></li>
+            
+            <li><a {% if nav_active_button == "Projects" %}class="current"{% endif %} href="{% url 'projects:index' %}">Projects</a>
             <li><a {% if nav_active_button == "Media" %}class="current"{% endif %} href="">Media</a>
                 <ul>
                     <li><a href="{% url 'video:index' %}">video</a></li>
                     <li><a href="{% url 'images:index' %}">photo</a></li>
                 </ul>
-            </li>
-            <li><a {% if nav_active_button == "Documents" %}class="current"{% endif %} href="{% url 'documents:index' %}">Documents</a></li>
-            <li style="border-right: 1px solid #fff;"><a {% if nav_active_button == "Contacts" %}class="current"{% endif %} href="{% url 'contacts:index' %}">Contacts</a></li>
-            <li class="social-item">
+            
+            <li><a {% if nav_active_button == "Documents" %}class="current"{% endif %} href="{% url 'documents:index' %}">Documents</a>
+            <li style="border-right: 1px solid #fff;"><a {% if nav_active_button == "Contacts" %}class="current"{% endif %} href="{% url 'contacts:index' %}">Contacts</a>
+            <!--div><li class="social-item">
                     <a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/facebook4.svg' %}"></a>
             </li>
             <li class="social-item">
@@ -99,11 +89,30 @@
             </li>
             <li class="social-item">
                     <a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/vk2.svg' %}"></a>
-            </li>
+            </li></div-->
+            <!--li>
+                <div>
+                    <a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/insta.svg' %}"></a>
+                    
+                </div>
+            </li-->
         </ul>
+        <ul>
+                    <li style="padding:0px;"><a style="padding:0;" href=""><img style="vertical-align:middle;"  src="{% static '/static/social-icons/insta.svg' %}"></a></li></ul>
     </nav>
-    <div style="margin: 0 10%;">
+    <div class="slideshow">
+       {% for slide in slide_list %}
+           <figure class={% if forloop.first %}"show"{% else %}""{% endif %}>
+               <img style="width: 100%;" src="{{ slide.image.url }}" />
+               <figcaption>{{ slide.caption|safe }}</figcaption>
+           </figure>
+       {% endfor %}
+       <span class="prev">&laquo;</span>
+       <span class="next">&raquo;</span>
+    </div>
+    <div class="content2">
         {% block content %}{% endblock %}
+        blabla
     </div>
     <div class="signer">
         ©2016 Достойный Выбор.

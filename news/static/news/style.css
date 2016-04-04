@@ -1,4 +1,4 @@
-ul.navigation {
+/*ul.navigation {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@ ul.navigation {
     border: 1px solid #ccc;
     border-bottom: 0px;
     background-color: #c00;
-}
+}*/
 li.nav {
     float: left;
 }
@@ -75,11 +75,11 @@ div.content {
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc;
 }
-div.title {
+/*div.title {
     overflow: hidden;
     border: 1px solid #ccc;
     position: relative;
-}
+}*/
 div.news-date {
     color: grey;
     font-size: x-small;
@@ -103,8 +103,6 @@ img.news-img {
 }
 div.news-block {
     overflow: hidden;
-    /*border: 1px solid #ccc;*/
-    margin-top: 10px;
     padding: 0px;
 }
 ul.news-list {
