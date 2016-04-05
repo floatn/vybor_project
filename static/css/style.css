@@ -18,7 +18,6 @@ div.org-name {
     position: relative;
     display: block;
     overflow: hidden;
-    width: 80%;
     margin: 3px 10%;
 }
 figure {
@@ -61,6 +60,7 @@ figure.show {
     border-bottom-right-radius: 3px;
 }
 nav {
+    height: 36px;
     margin: 0 10%;
     background-color: #0397d7;
 }
@@ -69,14 +69,10 @@ nav ul {
     margin: 0;
     padding: 0;
     background-color: #0397d7;
-    position: relative;
+    /*position: relative;*/
     display: inline-block;
+    vertical-align: middle;
 }
-/*nav > ul {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-}*/
 nav ul ul {
     display: block;
     visibility: hidden;
@@ -86,8 +82,8 @@ nav ul ul {
     opacity: 0;
 }
 nav ul li {
-    /*float: left;*/
     display: inline-block;
+    vertical-align: middle;
 }
 nav ul li ul li {
     /*float: left;*/
@@ -149,21 +145,16 @@ nav a {
     outline: 0px;
 }
 li.social-item {
-    display: inline-block;
-    float: right;
-    height: 30px;
-    width: 30px;
+    padding: 4px 2px;
 }
 a.social-link:link, a.social-link:hover, a.social-link:visited {
-    height: 30px;
-    margin: 3px 3px 0px 0px;
-    padding: 0;
+    height: 28px;
+    padding: 0px;
     color: #fff;
     background-color: #0397d7;
 }
 img.social-icon {
-    vertical-align: middle;
-    height: 30px;
+    height: 28px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -175,12 +166,12 @@ img.social-icon {
 div.content2 {
     margin: 0 10%;
     color: white;
-    background-color: lightblue;
+    background-color: #3bb9ff;
 }
 div.signer {
     padding: 5px 10px;
     color: #f2f2f2;
     background-color: #0397d7;
     font-size: x-small;
-    margin: 10px 10% 0;
+    margin: 4px 10% 0;
 }
