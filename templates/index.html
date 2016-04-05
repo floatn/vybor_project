@@ -59,8 +59,14 @@
         <img class="symb" src="/media/logo.jpg">
         <div class="org-name">ДОСТОЙНЫЙ <br>ВЫБОР</div>
     </div>
+    <!--ul class="social-list">
+        <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/facebook4.svg' %}"></a>
+        <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/youtube3.svg' %}"></a>
+        <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/vk2.svg' %}"></a>
+        <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/insta.svg' %}"></a>
+    </ul-->
     <nav><!--Removed </li> to delete gaps between nav items-->
-        <ul style="margin-left:15%;">
+        <ul>
             <li><a class="home" href="{% url 'home:index' %}">News</a>
             <li><a {% if nav_active_button == "About" %}class="current"{% endif %} href="">About</a>
                 <ul>
@@ -78,15 +84,7 @@
             <li><a {% if nav_active_button == "Documents" %}class="current"{% endif %} href="{% url 'documents:index' %}">Documents</a>
             <li><a {% if nav_active_button == "Contacts" %}class="current"{% endif %} href="{% url 'contacts:index' %}">Contacts</a>
         </ul>
-        <ul class="social-list">
-            <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/facebook4.svg' %}"></a>
-            <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/youtube3.svg' %}"></a>
-            <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/vk2.svg' %}"></a>
-            <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/insta.svg' %}"></a>
-        </ul>
     </nav>
-
-    <div style="background-color:#e5e4e2;">
     <div class="slideshow">
        {% for slide in slide_list %}
            <figure class={% if forloop.first %}"show"{% else %}""{% endif %}>
@@ -96,7 +94,6 @@
        {% endfor %}
        <span class="prev">&laquo;</span>
        <span class="next">&raquo;</span>
-    </div>
     </div>
     <div class="content2">
         {% block content %}{% endblock %}

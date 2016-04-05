@@ -1,6 +1,7 @@
 div.title {
-    margin-left: 15%;
+    margin-left: 5%;
     display: inline;
+    width: 15%;
 }
 img.symb {
     vertical-align: middle;
@@ -13,14 +14,15 @@ div.org-name {
     display: inline-block;
     vertical-align: middle;
     color: #e31e2f;
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: bold;
 }
 .slideshow {
     position: relative;
-    display: block;
-    overflow: hidden;
-    margin: 0 15%;
+    display: inline-block;
+    /*overflow: hidden;*/
+    margin: 0;
+    width: 40%;
 }
 figure {
     position: absolute;
@@ -62,6 +64,7 @@ figure.show {
     border-bottom-right-radius: 3px;
 }
 nav {
+    display: inline-block;
     background-color: #0397d7;
 }
 nav ul {
@@ -146,16 +149,24 @@ nav a {
 }
 ul.social-list {
     float: right;
+    margin: 0;
     margin-right: 15%;
+    padding: 0;
+    list-style-type: none;
+    /*background-color: #0397d7;
+    position: relative;*/
+    display: inline;
+    vertical-align: middle;
 }
 li.social-item {
+    display: inline-block;
     padding: 2px 2px;
 }
 a.social-link:link, a.social-link:hover, a.social-link:visited {
     height: 28px;
     padding: 0px;
     color: #fff;
-    background-color: #0397d7;
+    /*background-color: #0397d7;*/
 }
 img.social-icon {
     height: 28px;
