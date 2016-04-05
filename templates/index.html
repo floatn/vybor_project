@@ -53,14 +53,14 @@
         });
     </script>
 </head>
-<body>
+<body style="margin:0;">
     <div class="title">
         <!--div style="font-size: small; color: #0397d7; margin-top: 10px;">Ассоциация</br>участников программ</br>опережающего развития</br>и формирования интеллектуально-кадрового развития</div-->
         <img class="symb" src="/media/logo.jpg">
         <div class="org-name">ДОСТОЙНЫЙ <br>ВЫБОР</div>
     </div>
     <nav><!--Removed </li> to delete gaps between nav items-->
-        <ul>
+        <ul style="margin-left:10%;">
             <li><a class="home" href="{% url 'home:index' %}">News</a>
             <li><a {% if nav_active_button == "About" %}class="current"{% endif %} href="">About</a>
                 <ul>
@@ -77,9 +77,9 @@
                 </ul>
             
             <li><a {% if nav_active_button == "Documents" %}class="current"{% endif %} href="{% url 'documents:index' %}">Documents</a>
-            <li style="border-right: 1px solid #fff;"><a {% if nav_active_button == "Contacts" %}class="current"{% endif %} href="{% url 'contacts:index' %}">Contacts</a>
+            <li><a {% if nav_active_button == "Contacts" %}class="current"{% endif %} href="{% url 'contacts:index' %}">Contacts</a>
         </ul>
-        <ul style="float:right;margin-right:2px;">
+        <ul class="social-list">
             <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/facebook4.svg' %}"></a>
             <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/youtube3.svg' %}"></a>
             <li class="social-item"><a class="social-link" href=""><img class="social-icon" src="{% static '/static/social-icons/vk2.svg' %}"></a>
