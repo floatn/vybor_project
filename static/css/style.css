@@ -19,6 +19,7 @@ div.org-name {
     display: block;
     overflow: hidden;
     margin: 3px 10%;
+    width: 80%;
 }
 figure {
     position: absolute;
@@ -60,7 +61,6 @@ figure.show {
     border-bottom-right-radius: 3px;
 }
 nav {
-    height: 36px;
     margin: 0 10%;
     background-color: #0397d7;
 }
@@ -78,7 +78,6 @@ nav ul ul {
     visibility: hidden;
     position: absolute;
     z-index: 1;
-    top: 100%;
     opacity: 0;
 }
 nav ul li {
@@ -117,6 +116,7 @@ nav a:link, a:visited {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+    font-size: small;
     color: #fff;
     background-color: #0397d7;
 }
@@ -145,7 +145,7 @@ nav a {
     outline: 0px;
 }
 li.social-item {
-    padding: 4px 2px;
+    padding: 2px 2px;
 }
 a.social-link:link, a.social-link:hover, a.social-link:visited {
     height: 28px;
@@ -170,8 +170,8 @@ div.content2 {
 }
 div.signer {
     padding: 5px 10px;
+    margin: 4px 10% 0;
     color: #f2f2f2;
     background-color: #0397d7;
     font-size: x-small;
-    margin: 4px 10% 0;
 }
