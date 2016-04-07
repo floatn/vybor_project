@@ -59,8 +59,18 @@
         <img class="symb" src="/media/logo.jpg">
         <div class="org-name">ДОСТОЙНЫЙ <br>ВЫБОР</div>
     </div>
+    <div class="slideshow">
+       {% for slide in slide_list %}
+           <figure class={% if forloop.first %}"show"{% else %}""{% endif %}>
+               <img style="width: 100%;" src="{{ slide.image.url }}" />
+               <figcaption>{{ slide.caption|safe }}</figcaption>
+           </figure>
+       {% endfor %}
+       <span class="prev">&laquo;</span>
+       <span class="next">&raquo;</span>
+    </div>
     <nav><!--Removed </li> to delete gaps between nav items-->
-        <ul style="margin-left:15%;">
+        <ul>
             <li><a class="home" href="{% url 'home:index' %}">News</a>
             <li><a {% if nav_active_button == "About" %}class="current"{% endif %} href="">About</a>
                 <ul>
@@ -86,18 +96,6 @@
         </ul>
     </nav>
 
-    <div style="background-color:#e5e4e2;">
-    <div class="slideshow">
-       {% for slide in slide_list %}
-           <figure class={% if forloop.first %}"show"{% else %}""{% endif %}>
-               <img style="width: 100%;" src="{{ slide.image.url }}" />
-               <figcaption>{{ slide.caption|safe }}</figcaption>
-           </figure>
-       {% endfor %}
-       <span class="prev">&laquo;</span>
-       <span class="next">&raquo;</span>
-    </div>
-    </div>
     <div class="content2">
         {% block content %}{% endblock %}
         </br>
