@@ -1,29 +1,34 @@
 div.title {
-    /*margin-left: 15%;
-    display: inline;*/
-    width: 260px;
+    display: block;
     margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 221px;
+    
 }
 img.symb {
+    display: inline-block;
     vertical-align: middle;
     /*width: 181px;
     height: 182px;*/
-    width: 91px;
-    height: 91px;
+    width: 80px;
+    height: 80px;
 }
 div.org-name {
     display: inline-block;
     vertical-align: middle;
     color: #e31e2f;
-    font-size: 1.25em;
+    font-size: 1.0em;
     font-weight: bold;
 }
 .slideshow {
     position: relative;
-    display: block;
+    display: inline-block;
+    float: right;
     overflow: hidden;
-    margin: 0 10%;
+    width: 75%;
     margin-bottom: -4px;
+    height: 140px;
 }
 figure {
     position: absolute;
@@ -65,12 +70,15 @@ figure.show {
     border-bottom-right-radius: 3px;
 }
 nav {
-    margin: 0 10%;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
     background-color: #0397d7;
 }
 nav ul {
     list-style-type: none;
     margin: 0;
+    margin-left: 25%;
     padding: 0;
     background-color: #0397d7;
     /*position: relative;*/
@@ -150,7 +158,7 @@ nav a {
 }
 ul.social-list {
     float: right;
-    margin-right: 15%;
+    margin: 0 5px;
 }
 li.social-item {
     padding: 2px 2px;
@@ -180,7 +188,7 @@ div.content2 {
 }
 div.signer {
     padding: 5px 10px;
-    margin: 4px 10%;
+    margin: 4px 0;
     color: #f2f2f2;
     background-color: #0397d7;
     font-size: x-small;
