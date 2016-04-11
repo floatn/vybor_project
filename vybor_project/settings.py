@@ -107,6 +107,7 @@ MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "media"),
 ]
 
 if socket.gethostname() in ['host13',]:
