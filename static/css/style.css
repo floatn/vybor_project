@@ -89,7 +89,6 @@ nav ul li {
     vertical-align: middle;
 }
 nav ul li ul li {
-    /*float: left;*/
     display: block;
 }
 li.link {
