@@ -74,9 +74,10 @@
             <li><a class="home" href="{% url 'home:index' %}">Новости</a>
             <li><a {% if nav_active_button == "About" %}class="current"{% endif %} href="">О нас</a>
                 <ul>
-                    <li><a href="{% url 'advisors:index' %}">Учредители</a></li>
-                    <li><a href="{% url 'strategy:index' %}">Стратегия</a></li>
+                    <li><a href="{% url 'advisors:index' %}">Экспертный совет</a></li>
+                    <li><a href="{% url 'direction:index' %}">Руководство</a></li>
                     <li><a href="{% url 'partners:index' %}">Партнеры</a></li>
+                    <li><a href="{% url 'strategy:index' %}">Стратегия</a></li>
                 </ul>
             
             <li><a {% if nav_active_button == "Projects" %}class="current"{% endif %} href="{% url 'projects:index' %}">Проекты</a>
