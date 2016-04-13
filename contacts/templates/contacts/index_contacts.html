@@ -6,7 +6,7 @@
 {% block content %}
     <ul class="contact-list">
         <div class="contact-title">Offices</div>
-        {% for office in office %}
+        {% for office in office_list %}
             <li>
                 <div class="contact-name">
                     {{ office.description }}</br>
@@ -23,7 +23,7 @@
         {% endfor %}
         </br>
         <div class="contact-title">Contacts</div>
-        {% for person in contacts %}
+        {% for person in contact_list %}
             <li>
                 <div class="contact-name">
                     <b>{{ person.position }}</b></br>
