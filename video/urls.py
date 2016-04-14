@@ -4,5 +4,5 @@ from . import views
 
 
 urlpatterns = [
-	url(r'^$', views.VideoPageView.as_view(), name = 'index'),
+	url(r'^$', views.VideoPageView.as_view(), name = 'video'),
 ]

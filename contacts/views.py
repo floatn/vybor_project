@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.views import generic
-from about.
 
 from .models import Person, Office#, Email, Phone
 from images.models import Slides

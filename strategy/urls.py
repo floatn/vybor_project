@@ -4,5 +4,5 @@ from . import views
 
 
 urlpatterns = [
-	url(r'^$', views.StrategyPageView.as_view(), name = 'index'),
+	url(r'^$', views.StrategyPageView.as_view(), name = 'strategy'),
 ]

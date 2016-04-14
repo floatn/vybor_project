@@ -11,13 +11,14 @@ urlpatterns = [
     url(r'^about/strategy/', include('strategy.urls')),
     url(r'^about/', include('about.urls')),
     url(r'^contacts/', include('contacts.urls')),
-    #url(r'^projects/', include('projects.urls')),
+    url(r'^projects/', include('projects.urls')),
     url(r'^documents/', include('documents.urls')),
     #url(r'^advisors/', include('advisors.urls')),
     #url(r'^direction/', include('direction.urls')),
     url(r'^partners/', include('partners.urls')),
     url(r'^media/video/', include('video.urls')),
     url(r'^media/images/', include('images.urls')),
+]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
