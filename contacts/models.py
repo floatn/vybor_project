@@ -8,6 +8,7 @@ class Office(models.Model):
     def __unicode__(self):
         return self.address
 
+
 class Person(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
@@ -19,24 +20,40 @@ class Person(models.Model):
     def __unicode__(self):
         return ' '.join([self.last_name, self.first_name, self.father_name])
 
+
 class Email(models.Model):
     email = models.EmailField()
-    owner_person = models.ForeignKey('Person', blank=True, null=True)
 
     def __unicode__(self):
         return self.email
 
+ 
+class PersonEmail(Email):
+    owner_person = models.ForeignKey('Person', blank=True, null=True)
+
+ 
+class OfficeEmail(Email):
+    owner_office = models.ForeignKey('Office', blank=True, null=True)
+
+ 
 class Phone(models.Model):
     phone = models.CharField(max_length=20)
-    owner_person = models.ForeignKey('Person', blank=True, null=True)
-    owner_office = models.ForeignKey('Office', blank=True, null=True)
 
     def __unicode__(self):
         return self.phone
 
+
+class PersonPhone(Phone):
+    owner_person = models.ForeignKey('Person', blank=True, null=True)
+
+
+class OfficePhone(Phone):
+    owner_office = models.ForeignKey('Office', blank=True, null=True)
+
+
 class Photo(models.Model):
-    image = models.ImageField(upload_to="photo")
-    owner_person = models.ForeignKey('Person')
+    image = models.ImageField(upload_to='images/photo/')
+    owner_person = models.ForeignKey('Person', blank=True, null=True)
 
     def __unicode__(self):
         return self.image.name

@@ -10,9 +10,9 @@ class Project(models.Model):
     description = models.TextField()
     date_started = models.DateField(blank=True, null=True)
     date_finished = models.DateField(blank=True, null=True)
-    appointments = models.ManyToManyField(News, blank=True, null=True)
-    images = models.ManyToManyField(Image, blank=True, null=True)
-    video = models.ManyToManyField(Video, blank=True, null=True)
+    appointments = models.ManyToManyField(News, blank=True)
+    images = models.ManyToManyField(Image, blank=True)
+    video = models.ManyToManyField(Video, blank=True)
 
     def __unicode__(self):
         return self.title

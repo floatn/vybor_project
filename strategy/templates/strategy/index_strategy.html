@@ -4,12 +4,15 @@
     <link rel="stylesheet" type="text/css" href="{% static 'strategy/style.css' %}" />
 {% endblock %}
 {% block content %}
-<h2>Strategy</h2>
-<ul class="strategy">
-    {% for paragraph in paragraphs %}
-        <li class="paragraph">
-            <p>{{ paragraph.text|safe }}</p>
-        </li>
-    {% endfor %}
-</ul>
+    <h3>Задачи</h3>
+    {{ paragraphs.0.text|safe }}
+    </p>
+    <ul class="strategy">
+    <h3>Основные виды деятельности организации</h3>
+        {% for paragraph in paragraphs|slice:"1:" %}
+            <li class="strategy-item">
+                {{ paragraph.text|safe }};
+            </li>
+        {% endfor %}
+    </p>
 {% endblock %}

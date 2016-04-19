@@ -9,8 +9,8 @@ class News(models.Model):
     date = models.DateField(auto_now_add=True)
     title_image = models.ImageField(upload_to='images/news/')
     title_image_small = models.ImageField(upload_to='images/news/small/')
-    video = models.ManyToManyField(Video, blank=True, null=True)
-    images = models.ManyToManyField(Image, blank=True, null=True)
+    video = models.ManyToManyField(Video, blank=True)
+    images = models.ManyToManyField(Image, blank=True)
 
     def __unicode__(self):
         return self.title
