@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.views import generic
 
-from .models import Partners
+from .models import Partner
 from images.models import Slides
 
 
-class PartnersPageView(generic.ListView):
+class PartnerPageView(generic.ListView):
     model = Partners
     template_name = 'partners/index_partners.html'
     context_object_name = 'partners'

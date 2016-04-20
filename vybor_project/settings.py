@@ -56,7 +56,7 @@ INSTALLED_APPS = (
     'news',
     #'advisors',
     'strategy',
-    'partners',
+    #'partners',
     'video',
     'images',
 )

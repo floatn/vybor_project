@@ -15,7 +15,7 @@ urlpatterns = [
     url(r'^documents/', include('documents.urls')),
     #url(r'^advisors/', include('advisors.urls')),
     #url(r'^direction/', include('direction.urls')),
-    url(r'^partners/', include('partners.urls')),
+    #url(r'^partners/', include('partners.urls')),
     url(r'^media/video/', include('video.urls')),
     url(r'^media/images/', include('images.urls')),
 ]

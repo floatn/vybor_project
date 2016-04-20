@@ -13,7 +13,7 @@ class Person(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     father_name = models.CharField(max_length=20, blank=True, null=True)
-    position = models.CharField(max_length=255)
+    position = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     main_photo = models.OneToOneField('Photo', blank=True, null=True)
 
