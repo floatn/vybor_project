@@ -1,18 +1,6 @@
-img.symb {
-    float: right;
-    width: 181px;
-    height: 182px;
-}
-div.contacts {
-    position: absolute;
-    top: 1px;
-    right: 5px;
-    font-size: x-small;
-    font-style: italic;
-}
 ul.projects-list {
     list-style:none;
-    margin: 0 15%;
+    padding-left: 0;
 }
 ul.projects-item {
     list-style:none;
@@ -26,17 +14,4 @@ div.project-date {
     font-style: italic;
 }
 div.project-description {
-}
-div.social-block {
-    display: block;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-}
-div.signer {
-    padding-left: 8px;
-    display: block;
-    color: #f2f2f2;
-    background-color: #069;
-    font-size: x-small;
 }
