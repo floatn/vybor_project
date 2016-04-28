@@ -14,3 +14,13 @@ class ProjectsPageView(generic.ListView):
                 context['slide_list'] = Slides.objects.all()
                 context['nav_active_button'] = "Projects"
 		return context
+
+class ProjectDetailsPageView(generic.DetailView):
+        model = Project
+	template_name = 'projects/details_projects.html'
+        context_object_name = 'project'
+	def get_context_data(self, **kwargs):
+		context = super(ProjectDetailsPageView, self).get_context_data(**kwargs)
+                context['slide_list'] = Slides.objects.all()
+                context['nav_active_button'] = "Projects"
+		return context

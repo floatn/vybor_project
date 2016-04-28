@@ -1,17 +1,38 @@
 ul.projects-list {
-    list-style:none;
+    list-style: none;
     padding-left: 0;
 }
-ul.projects-item {
-    list-style:none;
+li.projects-item {
+    list-style: none;
+    margin-top: 2.5em;
+    overflow: hidden;
 }
 div.project-title {
     font-weight: bold;
     padding: 0 10px;
+    text-align: center;
 }
 div.project-date {
     font-size: small;
     font-style: italic;
+    margin: 0.5em;
 }
+img.project-image {
+    /*display: inline-block;*/
+    max-width: 35%;
+    max-height: 10em;
+    float: left;
+    margin: 0.5em;
+    z-index: -1;
+}
+a.project-link {
+    text-decoration: none;
+    white-space: nowrap;
+}
+a.project-link:link,
+a.project-link:visited { color: #265C83; }
+a.project-link:hover   { color: #7FDBFF; }
+a.project-link:active  { color: #007BE6; }
+
 div.project-description {
 }
