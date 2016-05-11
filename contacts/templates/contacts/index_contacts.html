@@ -5,23 +5,33 @@
 {% endblock %}
 {% block content %}
     <ul class="contact-list">
-        <div class="contact-title">Offices</div>
+        <div class="contact-title">Адрес</div>
         {% for office in office_list %}
             <li>
-                <div class="contact-name">
+                <!--div class="contact-name">
                     {{ office.description }}</br>
                     <div style="margin: 0px 10px"><b>{{ office.address }}</b></br></div>
-                </div>
-                <div class="contact-item">
-                    <ul class="contact-sub-list">
-                        {% for phone in office.phone_set.all %}
-                            <i><li>phone{{ forloop.counter }}: {{ phone }}</li></i>
+                </div-->
+                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:440px;width:700px;'><div id='gmap_canvas' style='height:440px;width:700px;'></div><div><small><a href="http://embedgooglemaps.com">                                   embedgooglemaps.com                         </a></small></div><div><small><a href="http://buyproxies.io/">buy proxy</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:16,center:new google.maps.LatLng(55.738871,37.620934000000034),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(55.738871,37.620934000000034)});infowindow = new google.maps.InfoWindow({content:'<strong>НКО "Достойный Выбор"</strong><br>Москва, Пыжевский переулок, д.7<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+                <ul class="contact-list">
+                    <li><i>Телефон: {{ office.officephone_set.all.0.phone }}</i></li>
+                    <!--ul class="contact-sub-list">
+                        {% for phone in office.officephone_set.all %}
+                            <i><li>Телефон{{ forloop.counter }}: {{ phone }}</li></i>
                         {% endfor %}
-                    </ul>
-                </div>
+                    </ul-->
+                    <li><i>Эл.почта: {{ office.officeemail_set.all.0.email }}</i></li>
+                    <!--ul class="contact-sub-list">
+                        {% for phone in office.officephone_set.all %}
+                            <i><li>Телефон{{ forloop.counter }}: {{ phone }}</li></i>
+                        {% endfor %}
+                    </ul-->
+                    <li><i>Почт.индекс: 119017</i></li>
+                </ul>
             </li>
         {% endfor %}
         </br>
+        <!--
         <div class="contact-title">Contacts</div>
         {% for person in contact_list %}
             <li>
@@ -45,5 +55,6 @@
                 </div>
             </li>
         {% endfor %}
+        -->
     </ul>
 {% endblock %}

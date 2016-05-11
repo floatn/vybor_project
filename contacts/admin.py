@@ -17,7 +17,20 @@ class PersonAdmin(admin.ModelAdmin):
         PersonPhoneAdminInline,
         PersonEmailAdminInline,
     ]
-admin.site.register(Office)
+class OfficePhoneAdminInline(admin.TabularInline):
+    model = OfficePhone
+    extra = 1
+
+class OfficeEmailAdminInline(admin.TabularInline):
+    model = OfficeEmail
+    extra = 1
+
+class OfficeAdmin(admin.ModelAdmin):
+    inlines = [
+        OfficePhoneAdminInline,
+        OfficeEmailAdminInline,
+    ]
+admin.site.register(Office, OfficeAdmin)
 admin.site.register(Person, PersonAdmin)
 admin.site.register(PersonEmail)
 admin.site.register(OfficeEmail)

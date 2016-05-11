@@ -4,13 +4,13 @@
     <link rel="stylesheet" type="text/css" href="{% static 'images/style.css' %}" />
 {% endblock %}
 {% block content %}
-    <h2>Photo</h2>
+    <h2>Галерея</h2>
     <div class="image-block">
         <ul class="image-list">
             {% for image in images_list %}
                 <li class="image-item">
                     <div class="image-pre">
-                        <a class="fancybox" href="{{ image.image.url }}" rel="gallery"><img width="120px" src="{{ image.image.url }}"></a>
+                        <a class="fancybox" title="{{ image.title }}" href="{{ image.image.url }}" rel="{{ image.rel }}"><img width="120px" src="{{ image.image.url }}"></a>
                     </div>
                 </li>
             {% endfor %}

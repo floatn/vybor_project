@@ -5,34 +5,24 @@ div.contacts {
     font-size: x-small;
     font-style: italic;
 }
-div.social-block {
-    display: block;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-}
 ul.contact-list {
-    border: 1px solid #ccc;
     list-style-type: none;
     overflow: hidden;
-    margin-left: 15%;
-    margin-right: 15%;
     padding-left: 0px;
+    margin-top: 1em;
 }
 div.contact-title {
-    border: 1px solid #ccc;
     text-align: left;
     padding-left: 0px;
     font-weight: bold;
     font-size: x-large;
+    margin-bottom: 1em;
 }
 div.contact-name {
-    border: 1px solid #ccc;
     text-align: left;
     margin: 10px 5px 0px;
 }
 div.contact-item {
-    border: 1px solid #ccc;
     text-align: left;
     margin: 0px 20px;
 }
