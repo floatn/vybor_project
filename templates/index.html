@@ -6,49 +6,15 @@
     <link rel="stylesheet" type="text/css" href="{% static '/static/css/style.css' %}" />
     {% block css %}{% endblock %}
     <!-- add jQuery library -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- add fancyBox -->
-    <link rel="stylesheet" href="/static/js/jquery.fancybox.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="/static/js/jquery.fancybox.pack.js"></script>
-    <!-- optional helpers -->
-    <link rel="stylesheet" href="/static/js/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="/static/js/helpers/jquery.fancybox-buttons.js"></script>
-    <script type="text/javascript" src="/static/js/helpers/jquery.fancybox-media.js"></script>
-    <link rel="stylesheet" href="/static/js/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="/static/js/helpers/jquery.fancybox-thumbs.js"></script>
-    <!-- -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".fancybox").fancybox({
-                openEffect: 'none',
-                closeEffect: 'none'
-            });
-            $(".utube").fancybox({
-                maxWidth: 800,
-                maxHeight: 600,
-                fitToView: false,
-                width: '70%',
-                height: '70%',
-                autoSize: false,
-                closeClick: false,
-                openEffect: 'none',
-                closeEffect: 'none'
-            });
-            var counter = 0,
-                $items = $('.slideshow figure'),
-                numItems = $items.length;
-            var showCurrent = function() {
-                var itemToShow = Math.abs(counter%numItems);
-                $items.removeClass('show');
-                $items.eq(itemToShow).addClass('show');
-            };
-            $('.next').on('click', function() {
-                counter++;
-                showCurrent();
-            });
-            $('.prev').on('click', function() {
-                counter--;
-                showCurrent();
+    <!--script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
+    <!--prettyPhoto-->
+    <script src="/static/js/prettyPhoto/jquery-1.6.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/static/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+    <script src="/static/js/prettyPhoto/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function(){
+            $("a[rel^='prettyPhoto']").prettyPhoto({
+                social_tools: false,
             });
         });
     </script>

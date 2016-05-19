@@ -4,7 +4,7 @@ from django.db import models
 class Image(models.Model):
     image = models.ImageField(upload_to="images/")
     title = models.TextField(blank=True, null=True)
-    rel = models.TextField(blank=True, null=True)
+    group = models.ForeignKey('ImageGroup', blank=False, null=True)
 
     def __unicode__(self):
         return self.image.name
@@ -20,3 +20,10 @@ class Slides(models.Model):
     class Meta:
             verbose_name = 'Slide'
             verbose_name_plural = 'Slides'
+
+class ImageGroup(models.Model):
+    title = models.TextField(blank=False, null=False)
+    description = models.TextField(blank=True, null=True)
+
+    def __unicode__(self):
+        return self.title

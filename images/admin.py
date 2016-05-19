@@ -1,7 +1,8 @@
 from django.contrib import admin
 
-from .models import Image, Slides
+from .models import *
 
 
 admin.site.register(Image)
 admin.site.register(Slides)
+admin.site.register(ImageGroup)

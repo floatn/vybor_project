@@ -34,15 +34,17 @@ ul.image-list {
 }
 li.image-item {
     display: inline-block;
-    border: 1px solid #ccc;
     /*margin: 5px;*/
-    padding: 5px;
-    vertical-align: top;
 }
 div.image-pre {
-    overflow: hidden;
     height: 90px;
 }
-a.fancybox:active, a.fancybox-nav:active, a.fancybox-close:active {
-    background: none;
+a.image-link {
+    background: transparent;
+    overflow: hidden;
+    vertical-align: top;
+}
+img.image {
+    border: 1px solid #ccc;
+    padding: 5px;
 }
