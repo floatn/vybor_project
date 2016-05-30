@@ -28,9 +28,9 @@ ul.video-list {
 }
 li.video-item {
     display: inline-block;
+    width: 18%;
 }
 div.video-pre {
-    width: 30%;
     /*float: left;
     height: 100px;
     position: relative;
@@ -38,13 +38,13 @@ div.video-pre {
     border: 1px solid #ccc;*/
 }
 a.video-link {
-    width: 30%;
+    /*width: 30%;*/
     background: transparent;
     overflow: hidden;
     vertical-align: top;
 }
 img.image {
-    width: 128px;
+    width: 90%;
     border: 1px solid #ccc;
     padding: 5px;
 }
