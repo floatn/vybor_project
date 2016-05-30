@@ -59,9 +59,9 @@ INSTALLED_APPS = (
     #'partners',
     'video',
     'images',
-    'imagestore',
-    'sorl.thumbnail',
-    'tagging',
+    #'imagestore',
+    #'sorl.thumbnail',
+    #'tagging',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -104,7 +104,13 @@ USE_TZ = True
 
 
 #Imagestore settings
+'''
+IMAGESTORE_UPLOAD_TO = 'media/'
+IMAGESTORE_IMAGES_ON_PAGE = 2
+IMAGESTORE_SELF_MANAGE = False
 IMAGESTORE_SHOW_USER = False
+IMAGESTORE_TEMPLATE = 'templates/index.html'
+'''
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/

@@ -18,7 +18,7 @@ urlpatterns = [
     #url(r'^partners/', include('partners.urls')),
     url(r'^media/video/', include('video.urls')),
     url(r'^media/images/', include('images.urls')),
-    url(r'^media/gallery/', include('imagestore.urls', namespace='imagestore')),
+    #url(r'^media/gallery/', include('imagestore.urls', namespace='imagestore')),
 ]
 
 if settings.DEBUG:

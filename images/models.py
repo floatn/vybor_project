@@ -4,7 +4,7 @@ from django.db import models
 class Image(models.Model):
     image = models.ImageField(upload_to="images/")
     title = models.TextField(blank=True, null=True)
-    group = models.ForeignKey('ImageGroup', blank=False, null=True)
+    group = models.ForeignKey('ImageGroup', blank=True, null=True)
 
     def __unicode__(self):
         return self.image.name

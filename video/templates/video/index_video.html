@@ -10,10 +10,24 @@
             {% for video in video_list %}
                 <li class="video-item">
                     <div class="video-pre">
-                        <a class="utube fancybox.iframe" href="{{ video.link }}"><img class="video-img" src="{{ video.img_link }}"></a>
+                            <a class="video-link" title="gall" href="{{ video.link }}" rel="prettyPhoto[pp_gal]"><img class="image" src="{{ video.img_link }}" alt="{{ video.description }}"></a>
                     </div>
                 </li>
             {% endfor %}
         </ul>
+    </div>
+    <div class="pagination">
+        <div class="step-links">
+            <span class="current">
+                Page {{ video_page.number }} of {{ video_page.paginator.num_pages }}
+            </span>
+            </br>
+            {% if video_page.has_previous %}
+                <a style="float:left;" href="?page={{ video_page.previous_page_number }}">previous</a>
+            {% endif %}
+            {% if video_page.has_next %}
+                <a style="float:right;" href="?page={{ video_page.next_page_number }}">next</a>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}
