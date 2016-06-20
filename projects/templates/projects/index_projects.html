@@ -15,7 +15,9 @@
                 начат: {{ project.date_started }}
             </div>
             {% endlocalize %}
-            <img class="project-image" src="{{ project.images.all.0.image.url }}"/>
+            {% if project.title_image %}
+                <img class="project-image" src="{{ project.title_image.image.url }}"/>
+            {% endif %}
             {{ project.description|truncatechars:600 }}
             <a class="project-link" href="{% url 'project-details' pk=project.id %}">>> читать далее >></a>
         </li>

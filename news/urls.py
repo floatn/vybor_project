@@ -4,5 +4,5 @@ from . import views
 
 
 urlpatterns = [
-	url(r'^$', views.NewsPageView.as_view(), name = 'index'),
+	url(r'^$', views.NewsPageView.as_view(), name = 'news'),
 ]

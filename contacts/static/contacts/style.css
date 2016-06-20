@@ -9,18 +9,19 @@ ul.contact-list {
     list-style-type: none;
     overflow: hidden;
     padding-left: 0px;
-    margin-top: 1em;
+    margin: 0.25em 0 1em 1.5em;
 }
 div.contact-title {
     text-align: left;
     padding-left: 0px;
     font-weight: bold;
     font-size: x-large;
-    margin-bottom: 1em;
+    margin-bottom: 5px;
 }
 div.contact-name {
     text-align: left;
-    margin: 10px 5px 0px;
+    /*font-weight: bold;*/
+    margin: 0 1em;
 }
 div.contact-item {
     text-align: left;
@@ -29,6 +30,6 @@ div.contact-item {
 ul.contact-sub-list {
     list-style-type: none;
     overflow: hidden;
-    padding-left: 0px;
+    /*padding-left: 0px;*/
     font-size: small;
 }

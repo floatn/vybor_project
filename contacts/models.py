@@ -1,4 +1,5 @@
 from django.db import models
+import phonenumbers
 
 
 class Office(models.Model):
@@ -40,7 +41,9 @@ class Phone(models.Model):
     phone = models.CharField(max_length=20)
 
     def __unicode__(self):
-        return self.phone
+        parsed_number = phonenumbers.parse(self.phone, 'RU')
+        formatted_number = phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
+        return formatted_number
 
 
 class PersonPhone(Phone):

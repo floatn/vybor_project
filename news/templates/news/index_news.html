@@ -4,24 +4,22 @@
     <link rel="stylesheet" type="text/css" href="{% static 'news/style.css' %}" />
 {% endblock %}
 {% block content %}
-    <div class="news-block">
         <ul class="news-list">
-            {% for item in latest_news_list %}
+            {% for item in latest_news_list reversed %}
                 <li id= "{{ item.id }}" class="news-item">
-                    <div class="news-pre">
                         <div class="news-date">
                             {{ item.date }}
                         </div>
                         <div class="news-title">
                             {{ item.title }}
                         </div>
-                        <img class="news-img" src="{{ item.title_image.url }}"/>
+                        {% if item.title_image.url|length > 0 %}
+                            <img class="news-img" src="{{ item.title_image.url }}"/>
+                        {% endif %}
                         <div class="news-text">
                             {{ item.description|safe }}
-                        </div></br>
-                    </div>
+                        </div>
                 </li>
             {% endfor %}
         </ul>
-    </div>
 {% endblock %}

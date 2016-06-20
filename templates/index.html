@@ -37,8 +37,8 @@
     </div>
     <nav><!--Removed </li> to delete gaps between nav items-->
         <ul>
-            <li><a class="home" href="{% url 'home' %}">Новости</a>
-            <li><a {% if nav_active_button == "About" %}class="current"{% endif %} href="">О нас</a>
+            <li><a class="home" href="{% url 'news' %}">Новости</a>
+            <li><a id="not-active" {% if nav_active_button == "About" %}class="current"{% endif %} href="#">О нас</a>
                 <ul>
                     <li><a href="{% url 'about_advisors' %}">Экспертный совет</a></li>
                     <li><a href="{% url 'about_direction' %}">Руководство</a></li>
@@ -47,7 +47,7 @@
                 </ul>
             
             <li><a {% if nav_active_button == "Projects" %}class="current"{% endif %} href="{% url 'projects' %}">Проекты</a>
-            <li><a {% if nav_active_button == "Media" %}class="current"{% endif %} href="">Медиа</a>
+            <li><a id="not-active" {% if nav_active_button == "Media" %}class="current"{% endif %} href="">Медиа</a>
                 <ul>
                     <li><a href="{% url 'video' %}">Видео</a></li>
                     <li><a href="{% url 'images' %}">Фото</a></li>
@@ -65,8 +65,8 @@
 
     <div class="content2">
         {% block content %}{% endblock %}
-        </br>
-        </br>
+        <!--/br>
+        </br-->
     </div>
     <div class="signer">
         ©2016 Достойный Выбор.

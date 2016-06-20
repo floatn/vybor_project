@@ -112,6 +112,10 @@ div.contacts {
     font-size: x-small;
     font-style: italic;
 }
+#not-active {
+    pointer-events: none;
+    cursor: default;
+}
 nav a:link, a:visited {
     text-align: center;
     padding: 8px 12px;

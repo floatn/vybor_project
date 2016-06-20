@@ -3,19 +3,30 @@ ul.projects-list {
     padding-left: 0;
 }
 li.projects-item {
-    list-style: none;
-    margin-top: 2.5em;
-    overflow: hidden;
+    /*list-style: none;*/
+    border-top: 1px solid #ccc;
+    margin: 1.5em 0;
+    /*overflow: hidden;*/
 }
 div.project-title {
     font-weight: bold;
     padding: 0 10px;
+    margin-top: 0.5em;
     text-align: center;
 }
 div.project-date {
     font-size: small;
     font-style: italic;
     margin: 0.5em;
+}
+img.project-image {
+    /*max-width: 35%;
+    max-height: 10em;*/
+    width: 200px;
+    max-height: 260px;
+    float: left;
+    margin: 0.5em;
+    z-index: -1;
 }
 img.project-image-left {
     max-width: 35%;

@@ -1,23 +1,11 @@
-img.symb {
-    float: right;
-    width: 181px;
-    height: 182px;
-}
-nav a.current {
-    background-color: #fff;
-    color: #0397d7;
-}
-div.contacts {
-    position: absolute;
-    top: 1px;
-    right: 5px;
-    font-size: x-small;
-    font-style: italic;
-}
 ul.document-list {
     list-style: none;
+    padding-left: 0;
 }
 li.document-item {
+    display: inline-block;
+    width: 20em;
+    margin: 0 5px 5px 0;
 }
 div.documents-header {
     padding: 15px;
@@ -25,24 +13,19 @@ div.documents-header {
     font-weight: bold;
 }
 img.document-icon {
-    float: left;
-    width: 10px;
-    height: 10px;
-    margin: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
 a.document-file {
+    /*color: #00439f;*/
+    color: #157efb;
+    display: inline-block;
     font-size: small;
+    /*vertical-align: middle;*/
+    text-align: center;
 }
-div.social-block {
-    display: block;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-}
-div.signer {
-    padding-left: 8px;
-    display: block;
-    color: #f2f2f2;
-    background-color: #069;
-    font-size: x-small;
+a.document-file:visited {
+    color: #00439f;
 }

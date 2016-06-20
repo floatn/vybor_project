@@ -6,8 +6,8 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', include('home.urls')),
-    url(r'^news/', include('news.urls')),
+    #url(r'^$', include('home.urls')),
+    url(r'^$', include('news.urls')),
     url(r'^about/strategy/', include('strategy.urls')),
     url(r'^about/', include('about.urls')),
     url(r'^contacts/', include('contacts.urls')),
