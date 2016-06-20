@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'about/style.css' %}" />
+{% endblock %}
+{% block content %}
+<ul class="partners-list">
+    <h2 style="text-align:center;">Партнеры</h2>
+    {% for partner in partner_list %}
+        <li class="partner-item">
+            <img class="partner-image" src="{{ partner.logo.url }}"/>
+        <div class="partner-name">
+            <p class="partner-description">{{ partner.description|safe }}</p>
+            <h3 class="partner-title">{{ partner.title }}</h3></br>
+            <a class="partner-link" href="{{ partner.link }}">{{ partner.link }}</a>
+        </div>
+        </li>
+        </div>
+    {% endfor %}
+</ul>
+{% endblock %}

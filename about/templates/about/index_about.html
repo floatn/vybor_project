@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'about/style.css' %}" />
+{% endblock %}
+{% block content %}
+    <ul class="contact-list">
+        <h2 class="contact-title">{{ contact_title }}</h2>
+        {% for person in person_list %}
+            {% with person=person.related_person %}
+                <li>
+                    <div class="contact-item">
+                        <img class="contact-photo" src="{{ person.main_photo.image.url }}"/>
+                        <div class="contact-name">
+                            <h3 style="margin-top:0;">{{ person.position }}</h3>
+                            <p style="margin: 0.5em 10px">{{ person.last_name }} {{ person.first_name }} {{person.father_name }}</p>
+                            <p class="contact-description">{{ person.description }}</p>
+                        </div>
+                    </div>
+                    <!--div class="contact-item">
+                        <ul class="contact-sub-list">
+                            {% for email in person.email_set.all %}
+                                <i><li>email{{ forloop.counter }}: {{ email }}</li></i>
+                            {% endfor %}
+                        </ul>
+                    </div-->
+                    <!--div class="contact-item">
+                        <ul class="contact-sub-list">
+                            {% for phone in person.phone_set.all %}
+                                <i><li>phone{{ forloop.counter }}: {{ phone }}</li></i>
+                            {% endfor %}
+                        </ul>
+                    </div-->
+                </li>
+            {% endwith %}
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,78 @@
+div.contacts {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    font-size: x-small;
+    font-style: italic;
+}
+ul.contact-list {
+    /*border: 1px solid #ccc;*/
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 0px;
+    /*margin-left: 15%;
+    margin-right: 15%;*/
+}
+h2.contact-title {
+    text-align: center;
+    /*font-weight: bold;
+    font-size: x-large;*/
+}
+div.contact-item {
+    margin: 25px 0px;
+}
+img.contact-photo {
+    display: inline-block;
+    width: 35%;
+}
+div.contact-name {
+    display: inline-block;
+    width: 64%;
+    vertical-align: top;
+    text-align: center;
+    text-transform: capitalize;
+}
+p.contact-description {
+    padding-left: 10px;
+    text-align: left;
+    text-transform: none;
+    font-size: small;
+}
+ul.contact-sub-list {
+    list-style-type: none;
+    overflow: hidden;
+    padding-left: 0px;
+    font-size: small;
+}
+ul.partners-list {
+    list-style:none;
+    margin: 0;
+    padding-left: 0;
+}
+img.partner-image {
+    display: inline-block;
+    width: 35%;
+}
+div.partner-name {
+    display: inline-block;
+    width: 64%;
+    vertical-align: top;
+    text-align: center;
+}
+p.partner-description {
+    margin: 0;
+    text-align: center;
+    text-transform: none;
+    font-size: small;
+}
+h3.partner-title {
+    margin: 0;
+    text-align: center;
+}
+a.partner-link {
+    text-align: center;
+    color: black;
+}
+a.partner-link:hover {
+    color: #08648a;
+}
