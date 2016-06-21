@@ -21,7 +21,6 @@
             <span class="current">
                 Page {{ image_page.number }} of {{ image_page.paginator.num_pages }}
             </span>
-            </br>
             {% if image_page.has_previous %}
                 <a style="float:left;" href="?page={{ image_page.previous_page_number }}">previous</a>
             {% endif %}

@@ -21,7 +21,6 @@
             <span class="current">
                 Page {{ video_page.number }} of {{ video_page.paginator.num_pages }}
             </span>
-            </br>
             {% if video_page.has_previous %}
                 <a style="float:left;" href="?page={{ video_page.previous_page_number }}">previous</a>
             {% endif %}
