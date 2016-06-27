@@ -15,7 +15,7 @@
     {% for data, img in zip %}
         {{ data|safe|linebreaks }}
         {% if img %}
-            <img class="{% cycle 'project-image-left' 'project-image-right' %}" src="{{ img.image.url }}"/>
+            <img class="{% cycle 'project-image-left' 'project-image-right' %}" src="{{ img.image.url }}" alt="{{ img.image.title }}"/>
         {% endif %}
     {% endfor %}
     <!--img class="project-image" src="{{ project.images.all.0.image.url }}"/-->

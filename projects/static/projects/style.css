@@ -19,14 +19,18 @@ div.project-date {
     font-style: italic;
     margin: 0.5em;
 }
+div.project-crop {
+    width: 240px;
+    max-height: 240px;
+    float: left;
+    margin: 0.5em;
+    overflow: hidden;
+    z-index: -1;
+}
 img.project-image {
     /*max-width: 35%;
     max-height: 10em;*/
-    width: 200px;
-    max-height: 260px;
-    float: left;
-    margin: 0.5em;
-    z-index: -1;
+    width: 240px;
 }
 img.project-image-left {
     max-width: 35%;
