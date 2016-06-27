@@ -72,3 +72,6 @@ span.current {
     font-weight: bold;
     color: #0397d7;
 }
+#sb-title {
+    visibility: hidden;
+}

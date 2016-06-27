@@ -24,5 +24,4 @@ class ImagePageView(generic.ListView):
                 except EmptyPage:
                     file_images = paginator.page(paginator.num_pages)
                 context['image_page'] = file_images
-                print(context.keys())
                 return context
