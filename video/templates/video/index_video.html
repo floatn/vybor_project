@@ -4,13 +4,13 @@
     <link rel="stylesheet" type="text/css" href="{% static 'video/style.css' %}" />
 {% endblock %}
 {% block content %}
-    <h2>Video</h2>
+    <h2>Видео</h2>
     <div class="video-block">
         <ul class="video-list">
             {% for video in video_list %}
                 <li class="video-item">
                     <div class="video-pre">
-                            <a class="video-link" title="gall" href="{{ video.link }}" rel="prettyPhoto[pp_gal]"><img class="image" src="{{ video.img_link }}" alt="{{ video.description }}"></a>
+                            <a class="video-link" title="{{ video.description }}" href="{{ video.link }}" rel="shadowbox[video]"><img class="image" src="{{ video.img_link }}" alt="{{ video.description }}"></a>
                     </div>
                 </li>
             {% endfor %}

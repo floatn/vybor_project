@@ -10,7 +10,7 @@
             {% for image in image_page %}
                     <li class="image-item">
                         <div class="image-pre">
-                            <a class="image-link" title="gall" href="{{ image.image.url }}" rel="prettyPhoto[pp_gal]"><img class="image" src="{{ image.image.url }}" alt="{{ image.title }}"></a>
+                            <a class="image-link" title="{{ image.title }}" href="{{ image.image.url }}" rel="shadowbox[photo]"><img class="image" src="{{ image.image.url }}" alt="{{ image.group }}"></a>
                         </div>
                     </li>
             {% endfor %}
