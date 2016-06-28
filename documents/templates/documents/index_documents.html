@@ -5,13 +5,34 @@
 {% endblock %}
 {%block content %}
     <!--<div class="documents-header">Documents</div>-->
-    <ul class="document-list">
+    <!--ul class="document-list">
         {% for document in document_list %}
             <li class="document-item">
-                <!--div class="document-description">{{ document.description }}</div-->
                     <img class="document-icon" src="{% static 'folder-download.svg' %}"/>
                     <a class="document-file" href="{{ document.file.url }}">{{ document.description }}</a>
             </li>
         {% endfor %}
-    </ul>
+    </ul-->
+    <table>
+        {% for document in document_list %}
+        {% if not forloop.counter|divisibleby:"2" %}
+        <tr>
+        {% endif %}
+            <td>
+                <img style="vertical-align:middle;" src="{% static 'folder-download.svg' %}"/>
+            </td>
+            <td>
+                {{ document.description|wordwrap:10 }}
+            </td>
+        {% if forloop.counter|divisibleby:"2" %}
+        </tr>
+        {% else %}
+            <td>
+            </td>
+            <td>
+            </td>
+            </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
 {% endblock %}
