@@ -4,6 +4,7 @@ ul.document-list {
 }
 li.document-item {
     display: inline-block;
+    position: relative;
     width: 20em;
     margin: 0 5px 5px 0;
 }
@@ -13,18 +14,20 @@ div.documents-header {
     font-weight: bold;
 }
 img.document-icon {
-    display: inline-block;
+    position: absolute;
     width: 20px;
     height: 20px;
-    vertical-align: middle;
+    top: 50%;
+    margin-top: -10px;
 }
 a.document-file {
     /*color: #00439f;*/
     color: #157efb;
-    display: inline-block;
+    display: block;
     font-size: small;
     /*vertical-align: middle;*/
     text-align: center;
+    margin-left: 25px;
 }
 a.document-file:visited {
     color: #00439f;
