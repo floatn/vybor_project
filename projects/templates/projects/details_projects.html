@@ -15,7 +15,10 @@
     {% for data, img in zip %}
         {{ data|safe|linebreaks }}
         {% if img %}
-            <img class="{% cycle 'project-image-left' 'project-image-right' %}" src="{{ img.image.url }}" alt="{{ img.image.title }}"/>
+            <!--img class="{% cycle 'project-image-left' 'project-image-right' %}" src="{{ img.image.url }}" alt="{{ img.image.title }}"/-->
+            <div class="project-crop" style="float:{% cycle 'left' 'right' %};">
+                <img class="project-image" src="{{ img.image.url }}" alt="{{ img.image.title }}"/>
+            </div>
         {% endif %}
     {% endfor %}
     <!--img class="project-image" src="{{ project.images.all.0.image.url }}"/-->
