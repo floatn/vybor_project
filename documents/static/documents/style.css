@@ -33,3 +33,9 @@ a.document-file {
 a.document-file:visited {
     color: #00439f;
 }
+p.document-created {
+    font-size: x-small;
+    color: grey;
+    margin-top: 0;
+
+}

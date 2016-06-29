@@ -14,7 +14,7 @@
         {% endfor %}
     </ul-->
     <table>
-        {% for document in document_list %}
+        {% for document, created_time in document_list %}
         {% if not forloop.counter|divisibleby:"2" %}
         <tr>
         {% endif %}
@@ -22,8 +22,9 @@
                 <img class="document-icon" src="{% static 'folder-download.svg' %}"/>
             </td>
             <td>
-                <div style="width:100%;">
+                <div style="width:100%;margin-top:1em;">
                     <a class="document-file" href="{{ document.file.url }}">{{ document.description }}</a>
+                    <p class="document-created">добавлен: {{ created_time|date:"d M Y" }}</p>
                 </div>
             </td>
         {% if forloop.counter|divisibleby:"2" %}
