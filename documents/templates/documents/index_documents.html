@@ -19,19 +19,23 @@
         <tr>
         {% endif %}
             <td>
-                <img style="vertical-align:middle;" src="{% static 'folder-download.svg' %}"/>
+                <img class="document-icon" src="{% static 'folder-download.svg' %}"/>
             </td>
             <td>
-                {{ document.description|wordwrap:10 }}
+                <div style="width:100%;">
+                    <a class="document-file" href="{{ document.file.url }}">{{ document.description }}</a>
+                </div>
             </td>
         {% if forloop.counter|divisibleby:"2" %}
         </tr>
         {% else %}
-            <td>
-            </td>
-            <td>
-            </td>
-            </tr>
+            {% if forloop.last %}
+        <td>
+        </td>
+        <td>
+        </td>
+        </tr>
+            {% endif %}
         {% endif %}
         {% endfor %}
     </table>
