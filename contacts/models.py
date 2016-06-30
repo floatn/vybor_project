@@ -41,8 +41,8 @@ class Phone(models.Model):
     phone = models.CharField(max_length=20)
 
     def __unicode__(self):
-        parsed_number = phone#phonenumbers.parse(self.phone, 'RU')
-        formatted_number = phone#phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
+        parsed_number = self.phone#phonenumbers.parse(self.phone, 'RU')
+        formatted_number = self.phone#phonenumbers.format_number(parsed_number, phonenumbers.PhoneNumberFormat.INTERNATIONAL)
         return formatted_number
 
 
