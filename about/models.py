@@ -10,21 +10,31 @@ class RelatedPerson(models.Model):
     def __unicode__(self):
         return self.related_person.__unicode__()
 
+    class Meta:
+        verbose_name = 'Представитель'
+        verbose_name_plural = 'Представители'
 
-class Advisor(RelatedPerson): pass
+
+class Advisor(RelatedPerson):
+
+    class Meta:
+        verbose_name = 'Представитель экспертного совета'
+        verbose_name_plural = 'Экспертный совет'
 
 
 class Direction(RelatedPerson):
 
     class Meta:
-        verbose_name_plural = 'Direction'
+        verbose_name = 'Представитель руководства'
+        verbose_name_plural = 'Руководство'
 
 
 class Strategy(Paragraph):
 
     class Meta:
         proxy = True
-        verbose_name_plural = 'Strategy'
+        verbose_name = 'Стратегия'
+        verbose_name_plural = 'Стратегия'
 
 
 class Partner(models.Model):
@@ -37,5 +47,5 @@ class Partner(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = "Partner"
-        verbose_name_plural = "Partners"
+        verbose_name = 'Партнер'
+        verbose_name_plural = 'Партнеры'
