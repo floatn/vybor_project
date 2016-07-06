@@ -5,5 +5,5 @@ from django.apps import AppConfig
 
 
 class AboutConfig(AppConfig):
-    name = 'About'
+    name = 'about'
     verbose_name = 'О нас'
